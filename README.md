@@ -108,10 +108,12 @@ obs: Quando aparecer o job 'Automated Regressive Tests', clique nele para acompa
 > ```
 > obs: Se for a primeira vez clonando repositório , vai ser necessário fornecer suas credenciais usadas para logar no github.
 > 
-> 4. Caso queira executar no modo interface, entre no arquivo: resource > utils > hooks.robot e comente com um jogo da velha toda a linha onde está escrito 'Call Method  ${options}  add_argument  --headless'. Dessa forma
+> 4. Caso queira executar no modo interface, entre no arquivo: resource > utils > hooks.robot e comente com um jogo da velha toda a linha onde está escrito 'Call Method  ${options}  add_argument  --headless'. Dessa forma:
 > ```
 >#Call Method  ${options}  add_argument  --headless
 > ```
+> obs: Para conseguir executar os testes com sucesso na pipeline, mantenha o comando 'Call Method  ${options}  add_argument  --headless' descomentado.
+>
 > 5. Abrir o terminal na pasta criada apos clonar o projeto e executar o seguinte comando:
 > ```
 > robot -L trace -v ENVIRONMENT:prod tests
