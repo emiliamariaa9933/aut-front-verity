@@ -22,10 +22,12 @@ seleciona ambiente
   ${AMBIENTE}  Get From Dictionary  ${AMBIENTES}  ${ENVIRONMENT}
   Set Global Variable  ${AMBIENTE}
   IF  "${ENVIRONMENT}" == "prod"
-      Set Global Variable  ${AMBIENTE}  ${AMBIENTES.prod}
       Set Global Variable  ${AMBIENTE}  ${AMBIENTES.prod_contato}
+      Set Global Variable  ${AMBIENTE}  ${AMBIENTES.prod}
   ELSE IF  "${ENVIRONMENT}" == "hml"
+      Set Global Variable  ${AMBIENTE}  ${AMBIENTES.hml_contato}
       Set Global Variable  ${AMBIENTE}  ${AMBIENTES.hml}
   ELSE
+      Set Global Variable  ${AMBIENTE}  ${AMBIENTES.dev_contato}
       Set Global Variable  ${AMBIENTE}  ${AMBIENTES.dev}
   END
