@@ -108,11 +108,14 @@ obs: Quando aparecer o job 'Automated Regressive Tests', clique nele para acompa
 > ```
 > obs: Se for a primeira vez clonando repositório , vai ser necessário fornecer suas credenciais usadas para logar no github.
 > 
-> 4. Abrir o terminal na pasta criada apos clonar o projeto e executar o seguinte comando:
+> 4. Caso queira executar no modo interface, entre no arquivo: resource > pages > keywords > utils > hooks.robot e comente com um jogo da velha toda a linha onde está escrito 'Call Method  ${options}  add_argument  --headless'. Dessa forma
+> ```
+>#Call Method  ${options}  add_argument  --headless
+> ```
+> 5. Abrir o terminal na pasta criada apos clonar o projeto e executar o seguinte comando:
 > ```
 > robot -L trace -v ENVIRONMENT:prod tests
 > ```
-
 <a id="topico5"></a>
 ## 📚 5. Bibliotecas
 1. [String Library](https://robotframework.org/robotframework/latest/libraries/String.html)
