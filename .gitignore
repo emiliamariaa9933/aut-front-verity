@@ -1,0 +1,11 @@
+## Tests ##
+venv/*
+*.pyc
+*.html
+*.xml
+*.png
+*.log
+__pycache__/
+*__pycache__/
+*/Results
+*/Result
